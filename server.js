@@ -73,27 +73,32 @@ app.post("/chat", async (req, res) => {
 
 
             usersessions.history.push(`User:${message}`);
-        const now = new Date();
+
         const today = now.toDateString();
         const time = now.toLocaleTimeString();
 
 
-        const prompt =
-            `you are a helpful assistant.Answer the user's latest question clearly and directly. 
-        
-        Current date: ${today}
-        Current time: ${time}
-        
-        summary :
+        const now = new Date();
+
+        const prompt = `
+        You are a helpful, accurate AI assistant.
+
+        Current date and time: ${now.toString()}
+
+        Use the conversation history only as context.
+        Answer the user's latest question directly and clearly.
+        If asked about future/unreleased products, mention that official details may not be confirmed and discuss rumors/general expectations.
+
+        Conversation summary:
         ${usersessions.summary}
-        
-        Recent conversation :
+
+        Recent conversation:
         ${usersessions.history.slice(-4).join("\n")}
 
-        User's latest Question:
+        Latest user message:
         ${message}
-        
-        Ai:
+
+        Final answer:
         `;
 
 
