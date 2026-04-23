@@ -68,21 +68,30 @@ app.post("/chat", async (req, res) => {
                 summary: ""
             })
         }
-        if (usersessions.history.length % 6 === 0) {
-            usersessions.summary = await updatesummary(usersessions);
-        }
+        if (usersessions.history.length > 0 && usersessions.history.length % 6 === 0)
 
-        usersessions.history.push(`User:${message}`);
+
+
+            usersessions.history.push(`User:${message}`);
+        const now = new Date();
+        const today = now.toDateString();
+        const time = now.toLocaleTimeString();
 
 
         const prompt =
-            `you are a helpful assistant. 
+            `you are a helpful assistant.Answer the user's latest question clearly and directly. 
+        
+        Current date: ${today}
+        Current time: ${time}
         
         summary :
         ${usersessions.summary}
         
         Recent conversation :
         ${usersessions.history.slice(-4).join("\n")}
+
+        User's latest Question:
+        ${message}
         
         Ai:
         `;
