@@ -26,11 +26,6 @@ A modern AI chatbot frontend built with Next.js and React, connected to a backen
 
 [https://github.com/yourusername/AI-Chat-API](https://ai-chat-api-84vl.onrender.com)
 
-## Run Locally
-
-```bash
-npm install
-npm run dev
 
 ## Future Improvements
 
@@ -42,3 +37,11 @@ npm run dev
 ## Author
 
 Muralidhar M
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+
+
