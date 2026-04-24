@@ -31,3 +31,14 @@ A modern AI chatbot frontend built with Next.js and React, connected to a backen
 ```bash
 npm install
 npm run dev
+
+## Future Improvements
+
+- Dark mode  
+- Voice input  
+- Multiple chat sessions  
+- Better animations  
+
+## Author
+
+Muralidhar M
