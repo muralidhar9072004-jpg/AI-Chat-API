@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { apiKeyManager } from "./apiKeyManager.js";
 import mongoose, { model } from "mongoose";
 import cors from "cors";
 
@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//mongoose.connect("mongodb://localhost:27017/chatdb")
+// mongoose.connect("mongodb://localhost:27017/chatdb")
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log("mongo connected"))
     .catch(err => console.log(err));
@@ -27,9 +27,11 @@ const sessionSchema = new mongoose.Schema({
 })
 
 const Session = mongoose.model("Session", sessionSchema);
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+// const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
 
 async function updatesummary(usersessions) {
+    const genAI = apiKeyManager.getGenAI();
     const model = genAI.getGenerativeModel({
         model: "gemini-2.5-flash",
     });
@@ -117,6 +119,7 @@ app.post("/chat", async (req, res) => {
 
 
 
+        const genAI = apiKeyManager.getGenAI();
         const model = genAI.getGenerativeModel({
             model: "gemini-2.5-flash",
 
