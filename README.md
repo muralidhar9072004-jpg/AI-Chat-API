@@ -1,47 +1,39 @@
-# AI Chat Assistant - Frontend
+# AI Chat Assistant - Backend API
 
-A modern AI chatbot frontend built with Next.js and React, connected to a backend API for intelligent conversations with memory.
-
-## Live Demo
-[https://your-vercel-link.vercel.app](https://ai-chat-ui-lyart-nu.vercel.app/)
+Backend API for AI Chat Assistant built with Node.js, Express.js, MongoDB, and Google Gemini API.
 
 ## Features
 
-- Clean modern chat interface
-- Responsive design for desktop and mobile
-- Typing/loading animation
-- Persistent chat history
-- New Chat reset option
-- Connected to AI backend API
+- AI chat response generation
+- Conversation memory with summary
+- Chat history storage in MongoDB
+- Clear chat functionality
+- REST API endpoints
+- Deployed on Render
 
 ## Tech Stack
 
-- Next.js
-- React
-- Tailwind CSS
-- TypeScript
-- Vercel
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- Google Gemini API
+- Render
 
-## Backend Repository
+## Frontend Repository
 
-[https://github.com/yourusername/AI-Chat-API](https://ai-chat-api-84vl.onrender.com)
+https://github.com/yourusername/AI-Chat-UI
 
+## API Endpoints
 
-## Future Improvements
+### POST /chat
 
-- Dark mode  
-- Voice input  
-- Multiple chat sessions  
-- Better animations  
+Send user message and get AI reply.
 
-## Author
+Request Body:
 
-Muralidhar M
-
-## Run Locally
-
-```bash
-npm install
-npm run dev
-
-
+```json
+{
+  "userId": "murali99",
+  "message": "Hello"
+}
