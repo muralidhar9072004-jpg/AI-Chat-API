@@ -68,9 +68,14 @@ app.post("/chat", async (req, res) => {
                 summary: ""
             })
         }
-        if (usersessions.history.length > 0 && usersessions.history.length % 6 === 0) {
-            usersessions.summary = await updatesummary(usersessions);
+        if (usersessions.history.length > 0 && usersessions.history.length % 12 === 0) {
+            try {
+                usersessions.summary = await updatesummary(usersessions);
+            } catch (e) {
+                console.log("Summary skipped");
+            }
         }
+
         usersessions.history.push(`User:${message}`);
 
         const now = new Date();
