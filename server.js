@@ -76,8 +76,22 @@ app.post("/chat", async (req, res) => {
             }
         }
 
-        usersessions.history.push(`User:${message}`);
 
+
+        const lower = message.toLowerCase();
+
+        if (
+            lower.includes("earlier") ||
+            lower.includes("summary") ||
+            lower.includes("discuss") ||
+            lower.includes("before")
+        ) {
+            return res.json({
+                reply: usersessions.summary || "We recently discussed a few topics in our chat."
+            });
+        }
+
+        usersessions.history.push(`User:${message}`);
         const now = new Date();
 
         const prompt = `
@@ -107,6 +121,8 @@ app.post("/chat", async (req, res) => {
             model: "gemini-2.5-flash",
 
         });
+
+
 
 
         const result = await model.generateContent(prompt);
