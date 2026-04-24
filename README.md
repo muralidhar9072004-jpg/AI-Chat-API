@@ -22,7 +22,7 @@ Backend API for AI Chat Assistant built with Node.js, Express.js, MongoDB, and G
 
 ## Frontend Repository
 
-https://github.com/yourusername/AI-Chat-UI
+[https://github.com/yourusername/AI-Chat-UI](https://github.com/muralidhar9072004-jpg/AI-Chat-UI)
 
 ## API Endpoints
 
