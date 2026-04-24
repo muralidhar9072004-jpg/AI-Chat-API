@@ -25,6 +25,16 @@ Backend API for AI Chat Assistant built with Node.js, Express.js, MongoDB, and G
 [https://github.com/yourusername/AI-Chat-UI](https://github.com/muralidhar9072004-jpg/AI-Chat-UI)
 
 ## API Endpoints
+https://ai-chat-api-84vl.onrender.com/chat
+https://ai-chat-api-84vl.onrender.com/history/${userId}
+https://ai-chat-api-84vl.onrender.com/clear-chat
+
+
+## Run Locally
+
+npm install
+server.js
+
 
 ### POST /chat
 
@@ -37,3 +47,5 @@ Request Body:
   "userId": "murali99",
   "message": "Hello"
 }
+
+
