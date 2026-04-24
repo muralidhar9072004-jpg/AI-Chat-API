@@ -31,7 +31,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function updatesummary(usersessions) {
     const model = genAI.getGenerativeModel({
-        model: "gemini-2.5-flash-lite",
+        model: "gemini-3-pro-preview",
     });
 
     const prompt =
@@ -99,7 +99,7 @@ app.post("/chat", async (req, res) => {
 
 
         const model = genAI.getGenerativeModel({
-            model: "gemini-2.5-flash-lite",
+            model: "gemini-3-pro-preview",
 
         });
 
