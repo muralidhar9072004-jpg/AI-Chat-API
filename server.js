@@ -68,15 +68,10 @@ app.post("/chat", async (req, res) => {
                 summary: ""
             })
         }
-        if (usersessions.history.length > 0 && usersessions.history.length % 6 === 0)
-
-
-
-            usersessions.history.push(`User:${message}`);
-
-        const today = now.toDateString();
-        const time = now.toLocaleTimeString();
-
+        if (usersessions.history.length > 0 && usersessions.history.length % 6 === 0) {
+            usersessions.summary = await updatesummary(usersessions);
+        }
+        usersessions.history.push(`User:${message}`);
 
         const now = new Date();
 
