@@ -34,8 +34,11 @@ https://ai-chat-api-84vl.onrender.com/clear-chat
 
 ## Run Locally
 
+```bash
 npm install
+
 server.js
+```
 
 
 ### POST /chat
