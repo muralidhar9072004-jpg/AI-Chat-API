@@ -26,7 +26,9 @@ Backend API for AI Chat Assistant built with Node.js, Express.js, MongoDB, and G
 
 ## API Endpoints
 https://ai-chat-api-84vl.onrender.com/chat
+
 https://ai-chat-api-84vl.onrender.com/history/${userId}
+
 https://ai-chat-api-84vl.onrender.com/clear-chat
 
 
