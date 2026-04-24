@@ -3,7 +3,7 @@
 A modern AI chatbot frontend built with Next.js and React, connected to a backend API for intelligent conversations with memory.
 
 ## Live Demo
-https://your-vercel-link.vercel.app
+[https://your-vercel-link.vercel.app](https://ai-chat-ui-lyart-nu.vercel.app/)
 
 ## Features
 
@@ -24,7 +24,7 @@ https://your-vercel-link.vercel.app
 
 ## Backend Repository
 
-https://github.com/yourusername/AI-Chat-API
+[https://github.com/yourusername/AI-Chat-API](https://ai-chat-api-84vl.onrender.com)
 
 ## Run Locally
 
