@@ -33,7 +33,7 @@ const Session = mongoose.model("Session", sessionSchema);
 async function updatesummary(usersessions) {
     const genAI = apiKeyManager.getGenAI();
     const model = genAI.getGenerativeModel({
-        model: "gemini-3.1-flash-lite-preview",
+        model: "gemini-2.5-flash",
     });
 
     const prompt =
@@ -121,7 +121,7 @@ app.post("/chat", async (req, res) => {
 
         const genAI = apiKeyManager.getGenAI();
         const model = genAI.getGenerativeModel({
-            model: "gemini-3.1-flash-lite-preview",
+            model: "gemini-2.5-flash",
 
         });
 
